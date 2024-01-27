@@ -1,0 +1,69 @@
+1. add firebase config to the environment ts and change "firebase=" to "firebase:"
+
+2. when installed firebase using npm, it will get ask you to submit a code through your account to verify the authenticity just 
+do it. 
+
+3. Import environment.ts into the app.module.ts using: import { environment } from "./../environments/environment"
+
+4. import { FormsModule } from "@angular/forms"; in app.module.ts
+
+5. import { HttpsClientModule } from "@angular/common/http"; in app.module.ts
+
+6. //firebase related imports
+	import { AngularFireAuthModule } from "@angular/fire/auth";
+	import { AngularFireModule } from "@angular/fire";
+
+7. //for toast messages
+	import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+	import { ToastrModule } from "ngx-toastr";
+
+8. Whatever modules imported, put them up in imports in app.module.ts :
+	HttpsClientModule,
+	BrowserAnimationsModule,
+	ToastrModule.forRoot(),
+	FormsModule,
+	AngularFireModule.initializeApp(environment.firebase),
+	AngularFireAuthModule,
+
+9. Refer the firebase auth docs here: https://github.com/angular/angularfire/tree/master/docs/auth
+
+10. import { AngularFireAuth } from "@angular/fire/auth"; into the auth.service.ts
+
+11. In constructor, add :constructor(private auth: AngularFireAuth)
+
+12. Now we can use auth in our functions and also give it parameters which are needed to be accepted (email,password)
+
+Functions examples:
+
+signUp(email: string, password: string) {
+    return this.auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  signIn(email: string, password: string) {
+    return this.auth.signInWithEmailAndPassword(email, password);
+  }
+
+  getUser() {
+    return this.auth.authState;
+  }
+
+  signOut() {
+    return this.auth.signOut();
+  }
+
+13. These functions will return an observable which we can subscribe wherever we want to use it and can do all things (RxJs kicking in).
+authState is a big object which firebase returns when a user successfuly signs in. we subscribe to this getUser function which contains
+authstate inside the app.component.ts and subscribe to it in the following way:
+
+constructor(
+    private auth : AuthService
+  ){
+    auth.getUser().subscribe(
+      (user) => {
+        console.log(user);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }

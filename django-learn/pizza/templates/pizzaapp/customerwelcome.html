@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand">Welcome {{username}} !</a>
+      <a class="btn btn-dark" href="/myorders/" style="margin-right: -950px">My orders</a>
+      <a href="/userlogout/" class="btn btn-danger">Logout</a>
+    </div>
+</nav>
+{% for message in messages %}
+<div class="alert alert-success" role="alert">
+    {{message}}
+</div>
+{% endfor %}
+<form method="POST" action="/placeorder/">
+{% csrf_token %}
+<div class="container" style="width: 600px; display:block; margin:auto; margin-top: 80px">
+<table style="width: 85%">
+    <tr>
+        <th>Pizza</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    {% for pizza in pizzas %}
+    <tr>
+        <td>{{pizza.name}}</td>
+        <td>{{pizza.price}}</td>
+        <td><input type="number" name="{{pizza.id}}" min="0" value="0" style="width:60px"></td>
+    </tr>
+    {% endfor %}     
+</table>
+<input type="text" placeholder="Address" style="width: 400px; height:100px; margin-top: 110px" name="address">
+<input type="text" placeholder="Phone Number" style="width: 400px; margin-top: 10px" name="phoneno">
+<div class="container" style="display: block;">
+<input type="submit" class="btn btn-outline-success" style="float:left; margin-top: 100px; margin-left:130px" value="Place Order">
+</div>
+</div>
+
+</form>
+
+
+
+{% endblock %}

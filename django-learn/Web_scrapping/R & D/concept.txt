@@ -1,0 +1,17 @@
+1)News (using python web scraping library)
+Different IT domain news realtime
+
+2)Google Dorks Search Engine
+Searching for different filetypes made easy
+
+3)Exploit Db Search
+Searching for exploits made easy
+
+4)IP and dns information api
+IP and dns information searching made easy
+
+5)Crytography Detector and Encrypt/Decrypt
+
+6)File and virus scan for fraud detection
+
+6)Cybersecurity data and statistics

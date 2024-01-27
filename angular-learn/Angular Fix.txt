@@ -1,0 +1,3 @@
+ng new test --skip-install  
+then in project folder
+npm install --force

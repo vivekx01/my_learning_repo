@@ -1,0 +1,12 @@
+Google Safe browsing API
+Phishtank API
+Shodan API
+Metasploit API
+
+Data providing APIs:
+SecurityTrails Data Security API
+Greynoise API
+
+VirusScanning APIs:
+VirusTotal API
+Quttera API
