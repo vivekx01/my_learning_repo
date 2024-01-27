@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<style>
+  .intro-section {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("{% static 'img/bg-hosp.webp' %}");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(60%); /* Adjust the percentage to lower or increase the contrast */
+  z-index: -1;
+}
+
+</style>
+{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="py-20 intro-section">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold mb-6 text-white">Welcome to Evergreen Medical Center</h1>
+        <p class="text-gray-200 font-bold mb-12">Where compassionate care meets cutting-edge technology to enhance lives and promote well-being.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Mission -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Our Mission</h2>
+          <p class="text-gray-700">To provide exceptional healthcare services to our patients, utilizing advanced medical technologies, compassionate care, and a patient-centered approach. We strive to improve the well-being and quality of life for individuals and communities we serve, while upholding the highest standards of professionalism, integrity, and ethical practices.</p>
+        </div>
+        <!-- Vision -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Our Vision</h2>
+          <p class="text-gray-700">To become a leading healthcare provider recognized for our excellence in medical care, innovation, and commitment to improving the health and well-being of our patients. We envision a future where every individual has access to comprehensive and personalized healthcare services, supported by advanced technologies and delivered with compassion and empathy.</p>
+        </div>
+        <!-- Values -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h2 class="text-xl font-bold mb-4">Our Values</h2>
+          <ul class="text-gray-700 text-left">
+            <li class="mb-2">Compassion: We genuinely care about the well-being of our patients and strive to provide comfort, empathy, and understanding.</li>
+            <li class="mb-2">Excellence: We are committed to delivering high-quality healthcare services and continuously improving our standards to exceed expectations.</li>
+            <li class="mb-2">Integrity: We uphold the highest ethical standards, transparency, and honesty in all our interactions and decisions.</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="bg-green-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center ">Things that make us stand out</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/med-tech.webp' %}" alt="Advanced Medical Technologies" class="w-60 h-32 mb-4 ">
+          <h3 class="text-xl font-bold mb-4">Advanced Medical Technologies</h3>
+          <p class="text-gray-700">We embrace cutting-edge medical technologies to provide the best possible care for our patients. Our state-of-the-art equipment and innovative approaches enable accurate diagnoses and effective treatments.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/care.webp' %}" alt="Exceptional Care" class="w-60 h-32 mb-4 ">
+          <h3 class="text-xl font-bold mb-4">Exceptional Care</h3>
+          <p class="text-gray-700">At Evergreen Medical Center, we prioritize compassionate care and individual attention. Our dedicated healthcare professionals go above and beyond to ensure the well-being and comfort of each patient, providing personalized care that exceeds expectations.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/dept.webp' %}" alt="Facility 1" class="w-60  h-32 mb-4 ">
+          <h3 class="text-xl font-bold mb-4">Specialized Departments</h3>
+          <p class="text-gray-700">Our hospital features specialized departments equipped with advanced facilities, including specialized clinics, laboratories, and surgical suites. We have the expertise and resources to address a wide range of medical conditions.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/comfort.webp' %}" alt="Facility 2" class="w-60  h-32 mb-4 ">
+          <h3 class="text-xl font-bold mb-4">Comfortable Environment</h3>
+          <p class="text-gray-700">We strive to create a comfortable and welcoming environment for our patients. Our modern facilities are designed with your comfort in mind, ensuring a soothing ambiance that promotes healing and relaxation during your stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

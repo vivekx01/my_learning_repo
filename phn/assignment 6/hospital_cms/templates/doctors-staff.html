@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<style>
+    footer {
+      visibility: hidden;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+<!-- Main Content -->
+<main class="container mx-auto py-8 px-4">
+    <h1 class="text-3xl font-bold mb-6">Doctors and Staff</h1>
+
+    <!-- Search Form -->
+    <form id="searchForm" class="mb-6">
+      <div class="flex items-center">
+        <input type="text" id="searchInput" placeholder="Search by name, specialization, or department"
+          class="border border-gray-300 rounded-l-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500 flex-grow">
+        <button type="submit" id="searchButton"
+          class="bg-green-500 text-white py-2 px-4 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600">Search</button>
+      </div>
+    </form>
+
+    <!-- Doctors and Staff List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Doctor/Staff Card -->
+      {% for doctor in doctors %}
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-bold">{{doctor.name}}</h2>
+        <p class="text-sm text-gray-600">Qualifications: {{doctor.qualifications}}</p>
+        <p class="text-sm text-gray-600">Specialization: {{doctor.specialization}}</p>
+        <p class="text-sm text-gray-600">Experience: {{doctor.experience}} years</p>
+        <p class="text-sm text-gray-600">Contact: {{doctor.contact}}</p>
+      </div>
+      {% endfor %}
+      <!-- Repeat the above card for other doctors and staff members -->
+      <!-- Add more cards here -->
+    </div>
+  </main>
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      var doctorCards = document.querySelectorAll(".grid .bg-white");
+
+      doctorCards.forEach(function (card) {
+        var doctorName = card.querySelector("h2").innerText.toLowerCase();
+        var doctorSpecialization = card.querySelectorAll("p")[1].innerText.toLowerCase();
+        var doctorDepartment = card.querySelectorAll("p")[2].innerText.toLowerCase();
+
+        if (
+          doctorName.includes(searchQuery) ||
+          doctorSpecialization.includes(searchQuery) ||
+          doctorDepartment.includes(searchQuery)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+  {% endblock %}
+

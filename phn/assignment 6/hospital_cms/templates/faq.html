@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Content -->
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+
+    <section id="faq" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">General Questions</h2>
+      <ul class="list-disc pl-6">
+        <li>
+          <h3 class="text-xl font-bold">Q: What are your working hours?</h3>
+          <p>A: We are open from Monday to Friday, 9:00 AM to 8:00 PM.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: How can I book an appointment?</h3>
+          <p>A: You can book an appointment by calling our helpline at <a href="tel:+123456789">+1 (234) 567-89</a> or by using our online booking system.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: What insurance plans do you accept?</h3>
+          <p>A: We accept a wide range of insurance plans. Please bring your insurance card and valid identification for verification.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="billing" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Billing and Payments</h2>
+      <ul class="list-disc pl-6">
+        <li>
+          <h3 class="text-xl font-bold">Q: How can I pay my medical bills?</h3>
+          <p>A: We accept various payment methods, including cash, credit cards, and online payment platforms. You can pay your bills at our billing counter or through our online payment portal.</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Q: Can I set up a payment plan for my medical expenses?</h3>
+          <p>A: Yes, we offer payment plans for eligible patients. Please contact our billing department to discuss your options.</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+{% endblock %}

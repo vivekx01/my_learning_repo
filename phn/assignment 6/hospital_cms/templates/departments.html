@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<style>
+    .search-results {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    footer {
+      visibility: hidden;
+    }
+    
+    /* Custom Styles */
+    .search-container {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 9999px;
+      background-color: #FFFFFF;
+      color: #1F2937;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.5);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #9CA3AF;
+    }
+
+  </style>
+{% endblock %}
+{% block content %}
+<!-- Main Content -->
+<div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Departments</h2>
+    <div class="flex justify-center mb-6 search-container">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search departments...">
+      
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Department cards here -->
+      {% for department in departments %}
+      <a href="/data/departments/{{department.id}}/">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">{{department.dept_name}}</h3>
+          <p class="text-gray-700">{{department.dept_description}}</p>
+          <p class="text-gray-700 mt-4">Department Head: {{department.dept_head_name}}</p>
+          <p class="text-gray-700">Contact: {{department.dept_contact}}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <script>
+    document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+    });
+
+    var searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function () {
+      var searchValue = searchInput.value.toLowerCase();
+      var departmentCards = document.querySelectorAll('.grid > a > div');
+      departmentCards.forEach(function (card) {
+        var departmentName = card.querySelector('h3').textContent.toLowerCase();
+        if (departmentName.includes(searchValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  {% endblock %}
+

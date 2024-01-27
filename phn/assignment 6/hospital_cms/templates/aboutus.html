@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- About Us Section -->
+<section class="py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">About Evergreen Medical Center</h2>
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <div class="md:w-1/2">
+          <img src="{% static 'img/bg-hosp.webp' %}" alt="Hospital Image" class="rounded-lg mb-6">
+        </div>
+        <div class="md:w-1/2 md:pl-8">
+          <h3 class="text-xl font-bold mb-4">Our History</h3>
+          <p class="text-gray-700">Evergreen Medical Center was founded in 1990 with a vision to provide exceptional healthcare services to the community. Over the years, we have grown into a leading medical institution known for our commitment to quality care, advanced technologies, and compassionate approach.</p>
+          <h3 class="text-xl font-bold mt-8 mb-4">Achievements and Recognitions</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Recipient of the Excellence in Healthcare Award</li>
+            <li>Certified as a Center of Excellence for Cardiology Services</li>
+            <li>Accredited by the Joint Commission</li>
+            <li>Recognized as a Top Hospital for Patient Safety</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations Section -->
+  <section class="bg-green-200 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Our Specializations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">Cardiology</h3>
+          <p class="text-gray-700">Our experienced cardiologists provide comprehensive care for heart-related conditions, including diagnosis, treatment, and ongoing management. We utilize advanced cardiac technologies to deliver the highest standard of care.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">Orthopedics</h3>
+          <p class="text-gray-700">Our orthopedic specialists offer a range of services for musculoskeletal conditions, from joint replacements to sports medicine. We strive to enhance mobility and improve quality of life for our patients.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">Oncology</h3>
+          <p class="text-gray-700">Our oncology team provides personalized cancer care, including diagnosis, treatment planning, and advanced therapies. We are dedicated to supporting patients throughout their journey and achieving the best possible outcomes.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">Neurology</h3>
+          <p class="text-gray-700">Our neurologists specialize in the diagnosis and treatment of neurological disorders, such as stroke, epilepsy, and multiple sclerosis. We offer advanced diagnostic techniques and innovative treatments to optimize patient care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Medical Professionals Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Key Medical Professionals</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/doc1.webp' %}" alt="Doctor 1" class="w-full h-48 mb-4 object-cover">
+          <h3 class="text-xl font-bold mb-2">Dr. John Smith</h3>
+          <p class="text-gray-700">Cardiologist</p>
+          <p class="text-gray-700">With over 20 years of experience, Dr. Smith specializes in the diagnosis and treatment of cardiovascular diseases. He is dedicated to providing compassionate care and achieving optimal outcomes for his patients.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/doc2.webp' %}" alt="Doctor 2" class="w-full h-48 mb-4 object-cover">
+          <h3 class="text-xl font-bold mb-2">Dr. Emily Johnson</h3>
+          <p class="text-gray-700">Orthopedic Surgeon</p>
+          <p class="text-gray-700">Dr. Johnson is a highly skilled orthopedic surgeon specializing in joint replacements and sports-related injuries. She is passionate about helping patients regain mobility and improve their quality of life.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="{% static 'img/doc3.webp' %}" alt="Doctor 3" class="w-full h-48 mb-4 object-cover">
+          <h3 class="text-xl font-bold mb-2">Dr. Sarah Adams</h3>
+          <p class="text-gray-700">Oncologist</p>
+          <p class="text-gray-700">Dr. Adams is a dedicated oncologist with expertise in the diagnosis and treatment of various types of cancer. She believes in a multidisciplinary approach to cancer care and is committed to improving patient outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Process - Travel X</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-black py-4">
+    <h1 class="text-white text-4xl text-center">TravelX</h1>
+  </header>
+  <div class="min-h-screen flex flex-col justify-center items-center">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-4">Booking Process</h2>
+      <!-- Step 1: Select Package -->
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Step 1: Select Package</h3>
+        <p class="text-gray-600 mb-4">Choose the package you want to book:</p>
+        <!-- Package Options -->
+        <div class="flex items-center mb-2">
+          <input type="radio" id="package1" name="package" class="mr-2">
+          <label for="package1" class="text-gray-700">Package 1</label>
+        </div>
+        <div class="flex items-center mb-2">
+          <input type="radio" id="package2" name="package" class="mr-2">
+          <label for="package2" class="text-gray-700">Package 2</label>
+        </div>
+        <div class="flex items-center mb-2">
+          <input type="radio" id="package3" name="package" class="mr-2">
+          <label for="package3" class="text-gray-700">Package 3</label>
+        </div>
+      </div>
+
+      <!-- Step 2: Enter Traveler Information -->
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Step 2: Enter Traveler Information</h3>
+        <p class="text-gray-600 mb-4">Please provide your personal details:</p>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="text-gray-700">Full Name:</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="text-gray-700">Email:</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="text-gray-700">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <div class="mb-4">
+            <label for="requirements" class="text-gray-700">Specific Requirements:</label>
+            <textarea id="requirements" name="requirements" rows="3"
+              class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 3: Make Payment -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Step 3: Make Payment</h3>
+        <p class="text-gray-600 mb-4">Enter your payment details:</p>
+        <form>
+          <div class="mb-4">
+            <label for="cardNumber" class="text-gray-700">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber"
+              class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <div class="mb-4">
+            <label for="expiryDate" class="text-gray-700">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate"
+              class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <div class="mb-4">
+            <label for="cvv" class="text-gray-700">CVV:</label>
+            <input type="text" id="cvv" name="cvv" class="w-full bg-gray-100 rounded-lg py-2 px-3 mt-1">
+          </div>
+          <button class="bg-black hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded">
+            Pay Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black py-4 mt-8">
+    <p class="text-center text-white">© 2023 TravelX. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

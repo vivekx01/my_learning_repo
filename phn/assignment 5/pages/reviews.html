@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Travel X</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-black py-4">
+    <h1 class="text-white text-4xl text-center">TravelX</h1>
+  </header>
+
+  <!-- Review Form -->
+  <div class="min-h-screen py-8 px-4 sm:px-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-4">Leave a Review</h2>
+      <form>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="rating">Rating</label>
+          <select class="bg-white rounded-md py-2 px-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="review">Review</label>
+          <textarea class="bg-white rounded-md py-2 px-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows="4" id="review"></textarea>
+        </div>
+        <button class="bg-black hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded">
+          Submit Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="min-h-screen py-8 px-4 sm:px-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-4">Reviews</h2>
+      <div class="mb-4">
+        <div class="flex items-start mb-4">
+          <div class="flex-shrink-0 mr-4">
+            <img class="w-12 h-12 rounded-full" src="https://source.unsplash.com/random" alt="User Avatar">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">John Doe</h3>
+            <div class="flex items-center mb-1">
+              <svg class="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 0l2.366 7.278h7.634l-6.19 4.504 2.365 7.276L10 14.557l-6.176 4.501 2.365-7.276L0 7.278h7.634L10 0z">
+                </path>
+              </svg>
+              <span class="text-gray-600">4.5 Stars</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="mb-4">
+        <div class="flex items-start mb-4">
+          <div class="flex-shrink-0 mr-4">
+            <img class="w-12 h-12 rounded-full" src="https://source.unsplash.com/random" alt="User Avatar">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Jane Smith</h3>
+            <div class="flex items-center mb-1">
+              <svg class="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 0l2.366 7.278h7.634l-6.19 4.504 2.365 7.276L10 14.557l-6.176 4.501 2.365-7.276L0 7.278h7.634L10 0z">
+                </path>
+              </svg>
+              <span class="text-gray-600">5 Stars</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-black py-4">
+    <p class="text-center text-white">© 2023 TravelX. All rights reserved.</p>
+  </footer>
+
+
+</body>
+
+</html>

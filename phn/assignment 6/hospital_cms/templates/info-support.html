@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Content -->
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">Patient Information and Support</h1>
+
+    <!-- Important Information -->
+    <section id="important-info" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Important Information</h2>
+      <ul class="list-disc pl-6">
+        <li>Visiting hours: Monday to Friday, 9:00 AM - 8:00 PM</li>
+        <li>Appointment booking: Call our helpline at <a href="tel:+123456789">+1 (234) 567-89</a> or book online.</li>
+        <li>Insurance details: Please bring your insurance card and valid identification for verification.</li>
+      </ul>
+    </section>
+
+    <!-- Patient Resources -->
+    <section id="patient-resources" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Patient Resources</h2>
+      <ul class="list-disc pl-6">
+        <li><a href="/faq/">FAQs</a></li>
+        <li><a href="/patient-guides/">Patient Guides</a></li>
+      </ul>
+    </section>
+
+    <!-- Support Services -->
+    <section id="support-services">
+      <h2 class="text-2xl font-bold mb-2">Support Services</h2>
+      <p>We offer a range of support services to assist patients and their families:</p>
+      <ul class="list-disc pl-6">
+        <li>Counseling services</li>
+        <li>Social work support</li>
+        <li>Patient advocacy</li>
+        <li>Financial assistance programs</li>
+        <li>Support groups</li>
+      </ul>
+    </section>
+  </div>
+{% endblock %}

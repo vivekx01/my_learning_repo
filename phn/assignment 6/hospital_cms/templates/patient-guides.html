@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<style>
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #06B6D4;
+      padding: 20px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<!-- Content -->
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">Patient Guides</h1>
+
+    <section id="patient-guides" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Preparing for Your Visit</h2>
+      <p>Our patient guides provide valuable information and tips to help you prepare for your visit to Evergreen Medical Center.</p>
+      <ul class="list-disc pl-6">
+        <li><a href="guide/preparing-for-appointment.pdf" target="_blank" rel="noopener">Guide: Preparing for Your Appointment</a></li>
+        <li><a href="guide/preparing-for-surgery.pdf" target="_blank" rel="noopener">Guide: Preparing for Surgery</a></li>
+      </ul>
+    </section>
+
+    <section id="recovery" class="mb-8">
+      <h2 class="text-2xl font-bold mb-2">Recovery and Aftercare</h2>
+      <p>These guides provide important information for your recovery and aftercare:</p>
+      <ul class="list-disc pl-6">
+        <li><a href="guide/post-surgery-care.pdf" target="_blank" rel="noopener">Guide: Post-Surgery Care</a></li>
+        <li><a href="guide/managing-medication.pdf" target="_blank" rel="noopener">Guide: Managing Medication</a></li>
+      </ul>
+    </section>
+  </div>
+{% endblock %}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gamazon</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .product-card {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .product-card .img-wrapper {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-card .product-details {
+            padding: 20px;
+        }
+
+        .product-card .product-details h5 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-card .product-details p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .product-card .product-details .price {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .product-card .product-details .btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #e91e63;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card .product-details .btn:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark text-light py-3">
+        <div class="container">
+            <h1 class="text-center mb-0">Gamazon Shopping</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Clothing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Footwear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Furniture</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-3">Electronics</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/300x200.png?text=Product+Image"
+                                        alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h5>Product Name</h5>
+                                    <p>Brand Name</p>
+                                    <p class="price">$9.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more product cards here -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Clothing</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/300x200.png?text=Product+Image"
+                                        alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h5>Product Name</h5>
+                                    <p>Brand Name</p>
+                                    <p class="price">$9.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more product cards here -->
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h2 class="mb-3">Footwear</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/300x200.png?text=Product+Image"
+                                        alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h5>Product Name</h5>
+                                    <p>Brand Name</p>
+                                    <p class="price">$9.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more product cards here -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Furniture</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/300x200.png?text=Product+Image"
+                                        alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h5>Product Name</h5>
+                                    <p>Brand Name</p>
+                                    <p class="price">$9.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more product cards here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Gamazon. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p>Designed and developed by <a href="#">Team Gamazon</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>

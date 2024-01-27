@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <title>TravelX - Explore Destinations</title>
+</head>
+
+<body class="bg-black">
+  <header class="bg-black py-4">
+    <h1 class="text-white text-4xl text-center">TravelX</h1>
+  </header>
+
+  <main class="container mx-auto my-8">
+    <h2 class="text-2xl font-semibold text-white mb-4">Filters</h2>
+<div class="bg-gray-100 rounded-lg p-4 mb-8">
+  <h3 class="text-lg font-semibold mb-2">Filter Options</h3>
+  <form class="flex flex-col md:flex-row justify-between">
+    <div class="mb-4 md:mb-0">
+      <label class="text-gray-800">Location:</label>
+      <select class="bg-white rounded-md py-2 px-3 mt-1">
+        <option value="">Any</option>
+        <option value="beach">Beach</option>
+        <option value="mountains">Mountains</option>
+        <option value="city">City</option>
+        <option value="island">Island</option>
+        <option value="desert">Desert</option>
+        <option value="nature">Nature</option>
+      </select>
+    </div>
+    <div class="mb-4 md:mb-0">
+      <label class="text-gray-800">Price Range:</label>
+      <select class="bg-white rounded-md py-2 px-3 mt-1">
+        <option value="">Any</option>
+        <option value="1">Up to $500</option>
+        <option value="2">$500 - $1000</option>
+        <option value="3">$1000 - $2000</option>
+        <option value="4">$2000+</option>
+      </select>
+    </div>
+    <div>
+      <label class="text-gray-800">Activity Type:</label>
+      <select class="bg-white rounded-md py-2 px-3 mt-1">
+        <option value="">Any</option>
+        <option value="adventure">Adventure</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="sightseeing">Sightseeing</option>
+        <option value="culture">Culture</option>
+        <option value="wildlife">Wildlife</option>
+      </select>
+    </div>
+    <button class="bg-black hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded mt-4 md:mt-0">
+      Search
+    </button>
+  </form>
+</div>
+
+    <h2 class="text-2xl font-semibold text-white mb-4">Explore Destinations</h2>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Destination Card 1 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?beach" alt="Destination 1" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">Beach Paradise</h3>
+          <p class="text-gray-600 mb-2">Escape to the mesmerizing beaches with pristine sand and turquoise waters.</p>
+          <p class="text-gray-600">Starting from $500</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: Beach</p>
+            <p class="text-gray-400">Activity: Relaxation</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Destination Card 2 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?mountains" alt="Destination 2" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">Mountain Retreat</h3>
+          <p class="text-gray-600 mb-2">Discover the tranquility of the mountains and enjoy thrilling hiking trails.</p>
+          <p class="text-gray-600">Starting from $800</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: Mountains</p>
+            <p class="text-gray-400">Activity: Adventure</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Destination Card 3 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?city" alt="Destination 3" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">City Exploration</h3>
+          <p class="text-gray-600 mb-2">Experience the vibrant culture, architecture, and delicious cuisine of the city.</p>
+          <p class="text-gray-600">Starting from $400</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: City</p>
+            <p class="text-gray-400">Activity: Sightseeing</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Destination Card 4 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?island" alt="Destination 4" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">Tropical Island Getaway</h3>
+          <p class="text-gray-600 mb-2">Relax on the pristine beaches and soak up the sun on a beautiful island.</p>
+          <p class="text-gray-600">Starting from $600</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: Island</p>
+            <p class="text-gray-400">Activity: Relaxation</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Destination Card 5 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?desert" alt="Destination 5" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">Desert Adventure</h3>
+          <p class="text-gray-600 mb-2">Embark on an exhilarating journey through the vast deserts and witness breathtaking landscapes.</p>
+          <p class="text-gray-600">Starting from $700</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: Desert</p>
+            <p class="text-gray-400">Activity: Adventure</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Destination Card 6 -->
+      <a href="#" class="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+        <img src="https://source.unsplash.com/400x300/?nature" alt="Destination 6" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4 flex-grow">
+          <h3 class="text-lg font-semibold">Nature Retreat</h3>
+          <p class="text-gray-600 mb-2">Immerse yourself in the beauty of nature and explore stunning landscapes.</p>
+          <p class="text-gray-600">Starting from $550</p>
+          <div class="mt-auto">
+            <p class="text-gray-400">Location: Nature</p>
+            <p class="text-gray-400">Activity: Sightseeing</p>
+          </div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-black py-4 mt-8">
+    <p class="text-center text-white">© 2023 TravelX. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
